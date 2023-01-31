@@ -37,6 +37,7 @@ nav {
 
 .logo {
   height: 5.25rem;
+  cursor: pointer;
 }
 
 .login {
@@ -243,9 +244,11 @@ h2 {
 .form.form--loan {
   grid-template-columns: 2.5fr 1fr 2.5fr;
 }
+
 .form__label--loan {
   grid-row: 2;
 }
+
 /* End exceptions */
 
 .form__input {
@@ -294,4 +297,38 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+#credential-info {
+  display: flex;
+  gap: 10rem;
+}
+
+#credential-info .info h1 {
+  font-size: 1.8rem;
+}
+
+#credential-info .info p {
+  font-size: 1.4rem;
+}
+
+#credential-info .credential {
+  display: flex;
+  gap: 6rem;
+}
+
+#credential-info .credential span {
+  font-size: 2rem;
+}
+
+#credential-info .credential h1 {
+  font-size: 2.2rem;
+}
+
+#credential-info .credential p {
+  font-size: 1.6rem;
+}
+
+#credential-info .credential span:last-child {
+  margin-left: 1rem;
 }

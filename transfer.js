@@ -10,7 +10,7 @@ const account1 = {
 };
 
 const account2 = {
-  owner: 'Jessica Davis',
+  owner: 'Honore Abikunda',
   movements: [
     5000000, 3400000, -150000, -790000, -3210000, -1000000, 8500000, -30000,
   ],
@@ -19,14 +19,14 @@ const account2 = {
 };
 
 const account3 = {
-  owner: 'Steven Thomas Williams',
+  owner: 'Billy Ishimwe',
   movements: [200000, -200000, 340000, -300000, -20000, 50000, 400000, -460000],
   interestRate: 0.7,
   pin: 3333,
 };
 
 const account4 = {
-  owner: 'Sarah Smith',
+  owner: 'David SIndambiwe',
   movements: [430000, 1000000, 700000, 50000, 90000],
   interestRate: 1,
   pin: 4444,
@@ -36,6 +36,7 @@ const accounts = [account1, account2, account3, account4];
 
 /////////////////////////////////////////////////
 // Elements
+const logo = document.querySelector('.logo');
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance__value');
@@ -74,9 +75,8 @@ const displayMovements = function (movements, sort = false) {
 
     const html = `
       <div class="movements__row">
-        <div class="movements__type movements__type--${type}">${
-      i + 1
-    } ${type}</div>
+        <div class="movements__type movements__type--${type}">${i + 1
+      } ${type}</div>
         <div class="movements__value">${mov} Rwf</div>
       </div>
     `;
@@ -149,9 +149,8 @@ btnLogin.addEventListener('click', function (e) {
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and message
-    labelWelcome.textContent = `Welcome back, ${
-      currentAccount.owner.split(' ')[0]
-    }`;
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]
+      }`;
     containerApp.style.opacity = 100;
 
     // Clear input fields
@@ -220,7 +219,8 @@ btnClose.addEventListener('click', function (e) {
     // Hide UI
     containerApp.style.opacity = 0;
   }
-
+  btnLogin
+  btnLogin
   inputCloseUsername.value = inputClosePin.value = '';
 });
 
@@ -290,6 +290,7 @@ const convertTitleCase = function (title) {
   return capitzalize(titleCase);
 };
 
-console.log(convertTitleCase('this is a nice title'));
-console.log(convertTitleCase('this is a LONG title but not too long'));
-console.log(convertTitleCase('and here is another title with an EXAMPLE'));
+// return to home when ckick on logo
+logo.addEventListener('click', () => {
+  window.location.href = 'index.html';
+})
